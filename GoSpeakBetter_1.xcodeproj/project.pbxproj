@@ -14,6 +14,7 @@
 		1C4E01A41B6C779B00DA3E84 /* GoSpeakBetter_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E01A31B6C779B00DA3E84 /* GoSpeakBetter_1Tests.swift */; };
 		1C4E01DE1B6C784700DA3E84 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E01DD1B6C784700DA3E84 /* HomeViewController.swift */; };
 		1C4E01E01B6C786900DA3E84 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E01DF1B6C786900DA3E84 /* ProfileViewController.swift */; };
+		1C4E01E21B6C7A1E00DA3E84 /* GSBTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E01E11B6C7A1E00DA3E84 /* GSBTabbarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		1C4E01A31B6C779B00DA3E84 /* GoSpeakBetter_1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoSpeakBetter_1Tests.swift; sourceTree = "<group>"; };
 		1C4E01DD1B6C784700DA3E84 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1C4E01DF1B6C786900DA3E84 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1C4E01E11B6C7A1E00DA3E84 /* GSBTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSBTabbarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,8 @@
 		1C4E01881B6C779B00DA3E84 /* GoSpeakBetter_1 */ = {
 			isa = PBXGroup;
 			children = (
+				1C4E01E41B6C7A8E00DA3E84 /* ThirdPartyLibs */,
+				1C4E01E31B6C7A6B00DA3E84 /* GSBLibs */,
 				1C4E018B1B6C779B00DA3E84 /* AppDelegate.swift */,
 				1C4E01DD1B6C784700DA3E84 /* HomeViewController.swift */,
 				1C4E01DF1B6C786900DA3E84 /* ProfileViewController.swift */,
@@ -113,6 +117,21 @@
 				1C4E01A21B6C779B00DA3E84 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1C4E01E31B6C7A6B00DA3E84 /* GSBLibs */ = {
+			isa = PBXGroup;
+			children = (
+				1C4E01E11B6C7A1E00DA3E84 /* GSBTabbarViewController.swift */,
+			);
+			name = GSBLibs;
+			sourceTree = "<group>";
+		};
+		1C4E01E41B6C7A8E00DA3E84 /* ThirdPartyLibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ThirdPartyLibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +237,7 @@
 				1C4E018C1B6C779B00DA3E84 /* AppDelegate.swift in Sources */,
 				1C4E01E01B6C786900DA3E84 /* ProfileViewController.swift in Sources */,
 				1C4E01DE1B6C784700DA3E84 /* HomeViewController.swift in Sources */,
+				1C4E01E21B6C7A1E00DA3E84 /* GSBTabbarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
