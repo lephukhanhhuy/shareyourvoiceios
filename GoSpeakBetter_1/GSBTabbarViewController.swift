@@ -8,8 +8,16 @@
 
 import UIKit
 
+protocol GSBTabbarViewControllerDelegate {
+    func btnCenterSelected()
+}
+
 class GSBTabbarViewController: UITabBarController {
+    
+    var gsbTabbarDelegate:GSBTabbarViewControllerDelegate!
+    
     var centerButton:UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         centerButton = UIButton(frame: CGRectMake(0, 0, 100, 100))
@@ -17,10 +25,18 @@ class GSBTabbarViewController: UITabBarController {
         centerButton.backgroundColor = UIColor.blueColor()
         
         self.tabBar.addSubview(centerButton)
+        
+        centerButton.addTarget(self, action: Selector("btnCenterSelected"), forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         centerButton.center = CGPointMake(self.tabBar.frame.size.width/2, self.tabBar.frame.size.height/2)
+    }
+    
+    func btnCenterSelected() {
+        if self.gsbTabbarDelegate != nil {
+            self.gsbTabbarDelegate.btnCenterSelected()
+        }
     }
 }
