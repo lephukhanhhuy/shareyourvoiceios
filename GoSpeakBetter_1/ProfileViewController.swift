@@ -8,17 +8,47 @@
 
 import UIKit
 
-class ProfileViewController: GSBViewController {
+let textCellIdentifier = "TextCell"// Also set this in storyboard
+
+class ProfileViewController: GSBViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var publicData:Array<AudioObject> = Array<AudioObject>()
+    var privateData:Array<AudioObject> = Array<AudioObject>()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Add dummy data
+        for i in 0...20 {
+            privateData.append(AudioObject())
+        }
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: UITableViewDelegate
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! AudioTableViewCell
+        
+        var dataObject = privateData[indexPath.row]
+        
+        cell.lbCategory.text = dataObject.categoryName
+        cell.lbTitle.text = dataObject.title
+        // Set source_url for audioplayer
+        
+        return cell
     }
     
-    
+    // MARK: UITableViewDataSource
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return privateData.count
+    }
 }

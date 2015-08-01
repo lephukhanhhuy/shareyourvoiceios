@@ -20,11 +20,6 @@ class GSBViewController: UIViewController, GSBTabbarViewControllerDelegate {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     //MARK: GSBTabbarViewControllerDelegate
     func btnCenterSelected() {
         println("Open Record screen")

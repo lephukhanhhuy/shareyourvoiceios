@@ -48,21 +48,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Profile Screen" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="187" y="279" width="227" height="42"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Pon-Hd-Hbm">
+                                <rect key="frame" x="244" y="28" width="113" height="29"/>
+                                <segments>
+                                    <segment title="Private"/>
+                                    <segment title="Public"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ito-gT-Hlb">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextCell" rowHeight="100" id="FkI-jI-btJ" customClass="AudioTableViewCell" customModule="GoSpeakBetter_1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FkI-jI-btJ" id="6SR-hv-ZVF">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiK-sG-Og3">
+                                                    <rect key="frame" x="531" y="74" width="61" height="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is title, long title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-bA-d27">
+                                                    <rect key="frame" x="8" y="73" width="139" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXm-db-cVt" userLabel="AudioPlayer" customClass="AudioPlayer" customModule="GoSpeakBetter_1" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="FQe-ax-Blr"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="kiK-sG-Og3" secondAttribute="bottom" constant="8" id="AMP-CY-TfJ"/>
+                                                <constraint firstItem="lXm-db-cVt" firstAttribute="top" secondItem="6SR-hv-ZVF" secondAttribute="top" id="EcS-wd-Jz7"/>
+                                                <constraint firstItem="kiK-sG-Og3" firstAttribute="centerY" secondItem="sbi-bA-d27" secondAttribute="centerY" id="LDh-rI-wIr"/>
+                                                <constraint firstItem="lXm-db-cVt" firstAttribute="leading" secondItem="6SR-hv-ZVF" secondAttribute="leading" id="Sgo-ca-vg7"/>
+                                                <constraint firstAttribute="trailing" secondItem="lXm-db-cVt" secondAttribute="trailing" id="apZ-ex-44q"/>
+                                                <constraint firstItem="sbi-bA-d27" firstAttribute="leading" secondItem="6SR-hv-ZVF" secondAttribute="leading" constant="8" id="kBm-93-fmh"/>
+                                                <constraint firstAttribute="trailing" secondItem="kiK-sG-Og3" secondAttribute="trailing" constant="8" id="vVO-SU-3QC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="audioView" destination="lXm-db-cVt" id="4i7-tw-XM4"/>
+                                            <outlet property="lbCategory" destination="kiK-sG-Og3" id="Fum-c0-k0r"/>
+                                            <outlet property="lbTitle" destination="sbi-bA-d27" id="1kL-av-dtQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstAttribute="trailing" secondItem="ito-gT-Hlb" secondAttribute="trailing" id="4m5-OG-jCX"/>
+                            <constraint firstItem="ito-gT-Hlb" firstAttribute="top" secondItem="Pon-Hd-Hbm" secondAttribute="bottom" constant="8" id="7Rt-Di-xak"/>
+                            <constraint firstItem="ito-gT-Hlb" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="VK2-pl-LCi"/>
+                            <constraint firstAttribute="centerX" secondItem="Pon-Hd-Hbm" secondAttribute="centerX" id="Vzb-pO-3FC"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="ito-gT-Hlb" secondAttribute="bottom" id="ZIt-7i-zG2"/>
+                            <constraint firstItem="Pon-Hd-Hbm" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="w7s-EI-7vR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="tableView" destination="ito-gT-Hlb" id="HJc-4u-doq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

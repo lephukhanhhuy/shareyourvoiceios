@@ -16,6 +16,9 @@
 		1C4E01E01B6C786900DA3E84 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E01DF1B6C786900DA3E84 /* ProfileViewController.swift */; };
 		1C4E01E21B6C7A1E00DA3E84 /* GSBTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E01E11B6C7A1E00DA3E84 /* GSBTabbarViewController.swift */; };
 		1C4E01E61B6C7CB000DA3E84 /* GSBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E01E51B6C7CB000DA3E84 /* GSBViewController.swift */; };
+		1C4E01EA1B6C7FE100DA3E84 /* AudioObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E01E91B6C7FE100DA3E84 /* AudioObject.swift */; };
+		1C4E01ED1B6C81BD00DA3E84 /* AudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E01EC1B6C81BD00DA3E84 /* AudioTableViewCell.swift */; };
+		1C4E01EF1B6C85BF00DA3E84 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E01EE1B6C85BF00DA3E84 /* AudioPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		1C4E01DF1B6C786900DA3E84 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1C4E01E11B6C7A1E00DA3E84 /* GSBTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSBTabbarViewController.swift; sourceTree = "<group>"; };
 		1C4E01E51B6C7CB000DA3E84 /* GSBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSBViewController.swift; sourceTree = "<group>"; };
+		1C4E01E91B6C7FE100DA3E84 /* AudioObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioObject.swift; sourceTree = "<group>"; };
+		1C4E01EC1B6C81BD00DA3E84 /* AudioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioTableViewCell.swift; sourceTree = "<group>"; };
+		1C4E01EE1B6C85BF00DA3E84 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,11 +91,11 @@
 			children = (
 				1C4E01E41B6C7A8E00DA3E84 /* ThirdPartyLibs */,
 				1C4E01E31B6C7A6B00DA3E84 /* GSBLibs */,
-				1C4E018B1B6C779B00DA3E84 /* AppDelegate.swift */,
-				1C4E01E51B6C7CB000DA3E84 /* GSBViewController.swift */,
-				1C4E01DD1B6C784700DA3E84 /* HomeViewController.swift */,
-				1C4E01DF1B6C786900DA3E84 /* ProfileViewController.swift */,
+				1C4E01E71B6C7F5600DA3E84 /* DataObjects */,
+				1C4E01E81B6C7F6200DA3E84 /* ViewControllers */,
+				1C4E01EB1B6C819500DA3E84 /* Views */,
 				1C4E01911B6C779B00DA3E84 /* Main.storyboard */,
+				1C4E018B1B6C779B00DA3E84 /* AppDelegate.swift */,
 				1C4E01941B6C779B00DA3E84 /* Images.xcassets */,
 				1C4E01961B6C779B00DA3E84 /* LaunchScreen.xib */,
 				1C4E01891B6C779B00DA3E84 /* Supporting Files */,
@@ -135,6 +141,33 @@
 			children = (
 			);
 			name = ThirdPartyLibs;
+			sourceTree = "<group>";
+		};
+		1C4E01E71B6C7F5600DA3E84 /* DataObjects */ = {
+			isa = PBXGroup;
+			children = (
+				1C4E01E91B6C7FE100DA3E84 /* AudioObject.swift */,
+			);
+			name = DataObjects;
+			sourceTree = "<group>";
+		};
+		1C4E01E81B6C7F6200DA3E84 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C4E01E51B6C7CB000DA3E84 /* GSBViewController.swift */,
+				1C4E01DD1B6C784700DA3E84 /* HomeViewController.swift */,
+				1C4E01DF1B6C786900DA3E84 /* ProfileViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1C4E01EB1B6C819500DA3E84 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C4E01EC1B6C81BD00DA3E84 /* AudioTableViewCell.swift */,
+				1C4E01EE1B6C85BF00DA3E84 /* AudioPlayer.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,8 +271,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C4E018C1B6C779B00DA3E84 /* AppDelegate.swift in Sources */,
+				1C4E01ED1B6C81BD00DA3E84 /* AudioTableViewCell.swift in Sources */,
 				1C4E01E01B6C786900DA3E84 /* ProfileViewController.swift in Sources */,
+				1C4E01EF1B6C85BF00DA3E84 /* AudioPlayer.swift in Sources */,
 				1C4E01DE1B6C784700DA3E84 /* HomeViewController.swift in Sources */,
+				1C4E01EA1B6C7FE100DA3E84 /* AudioObject.swift in Sources */,
 				1C4E01E61B6C7CB000DA3E84 /* GSBViewController.swift in Sources */,
 				1C4E01E21B6C7A1E00DA3E84 /* GSBTabbarViewController.swift in Sources */,
 			);
